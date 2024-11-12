@@ -1,0 +1,6 @@
+runs
+results
+__pycache__
+.git
+.vscode
+.DS_Store
