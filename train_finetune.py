@@ -46,7 +46,7 @@ if __name__ == "__main__":
 	
 	parser = argparse.ArgumentParser()
 	parser.add_argument("--env", default="antmaze-umaze-v2")        # Environment name
-	parser.add_argument("--seed", default=3, type=int)              # Sets Gym, PyTorch and Numpy seeds
+	parser.add_argument("--seed", default=5, type=int)              # Sets Gym, PyTorch and Numpy seeds
 	parser.add_argument("--eval_freq", default=None, type=int)      # Frequency of Evaluation
 	parser.add_argument("--eval_episodes", default=None, type=int)  # Evaluation episodes
 	parser.add_argument("--max_timesteps", default=1e6, type=int)   # Max time steps to run environment
@@ -73,7 +73,7 @@ if __name__ == "__main__":
 	env = gym.make(args.env)
 	model_dir = './runs/offline/{}/lam{}_nu{}_seed{}'.format(
      args.env, args.lam, args.nu, args.seed)
-	work_dir = '../runs/finetune/{}/lam{}_nu{}_lamend{}_nuend{}_seed{}'.format(
+	work_dir = './runs/finetune/{}/lam{}_nu{}_lamend{}_nuend{}_seed{}'.format(
      args.env, args.lam, args.nu, args.lam_end, args.nu_end, args.seed)
 	# Set seeds
 	env.seed(args.seed)

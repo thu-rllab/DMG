@@ -13,14 +13,14 @@ Paper results were collected with [MuJoCo 210](https://mujoco.org/) (and [mujoco
 Use the following command to train offline RL on D4RL, including Gym locomotion and Antmaze tasks, and save the models.
 ```
 python train_offline.py --env halfcheetah-medium-v2 --lam 0.25 --nu 0.1 --save_model
-python train_offline.py --env antmaze-large-play-v2 --lam 0.25 --nu 0.5 --no_normalize --save_model
+python train_offline.py --env antmaze-large-diverse-v2 --lam 0.25 --nu 0.5 --no_normalize --save_model
 ```
 
 ### Offline-to-Online Finetuning
 
 Use the following command to online fine-tune the pretrained offline models on AntMaze tasks.
 ```
-python train_finetune.py --env antmaze-large-diverse-v2 --lam 0.25 --nu 0.5 --no_normalize
+python train_finetune.py --env antmaze-large-diverse-v2 --lam 0.25 --nu 0.5 --lam_end 0.5 --nu_end 0.005 --no_normalize
 ```
 
 ### Logging
