@@ -1,11 +1,11 @@
 # Doubly Mild Generalization for Offline Reinforcement Learning
 
-Implementation of the DMG algorithm.
+Code for NeurIPS 2024 accepted paper: [**Doubly Mild Generalization for Offline Reinforcement Learning**](https://arxiv.org/pdf/2411.07934).
 
-## Environment
+## 🔧 Environment
 Paper results were collected with [MuJoCo 210](https://mujoco.org/) (and [mujoco-py 2.1.2.14](https://github.com/openai/mujoco-py)) in [OpenAI gym 0.23.1](https://github.com/openai/gym) with the [D4RL datasets](https://github.com/Farama-Foundation/D4RL). Networks are trained using [PyTorch 1.11.0](https://github.com/pytorch/pytorch) and [Python 3.7](https://www.python.org/).
 
-## Usage
+## 🚀 Usage
 
 
 ### Offline RL Training
@@ -29,4 +29,18 @@ You can view saved runs using TensorBoard.
 
 ```
 tensorboard --logdir <run_dir>
+```
+
+## 📝 Citation
+
+If you find this work useful, please consider citing:
+```bibtex
+@article{mao2024doubly,
+  title={Doubly mild generalization for offline reinforcement learning},
+  author={Mao, Yixiu and Wang, Qi and Qu, Yun and Jiang, Yuhang and Ji, Xiangyang},
+  journal={Advances in Neural Information Processing Systems},
+  volume={37},
+  pages={51436--51473},
+  year={2024}
+}
 ```
